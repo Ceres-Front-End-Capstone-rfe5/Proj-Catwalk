@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Correctly 1`] = `ShallowWrapper {}`;
+
+exports[`Updates current product when rendering page 1`] = `ShallowWrapper {}`;
