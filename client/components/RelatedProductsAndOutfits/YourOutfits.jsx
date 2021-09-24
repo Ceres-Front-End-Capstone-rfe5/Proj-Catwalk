@@ -162,7 +162,7 @@ class OutfitList extends React.Component {
       <div className = "related-products-card">
         <div className="outfit-headers">
 
-      <h2 className='outfit-header'> Your Outfits</h2>
+      <h2 className='carousal-header'> Your Outfits</h2>
       <h3 className='empty-outfit-header'>Add Outfits to Save for Later</h3>
         </div>
       <Product emptyOutfits={this.state.emptyOutfits}/>
