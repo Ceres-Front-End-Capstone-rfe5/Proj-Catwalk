@@ -45,9 +45,9 @@ function SizeQuantitySelector({ style, addToBag, handleAddMainAsFavorite, curren
       <SizeSelector style={style} updateInventory={updateInventory} sizeWarning={sizeWarning} />
       {/* <QuantitySelector inventory={inventory} updateQuantity={updateQuantity}/> */}
       <div className="selector-add-to-cart">
-      <div className="promo-box">
-        4 interest-free payments of $50.00 with <i>Klarna</i>. <span>Learn more</span>
-      </div>
+        <div className="promo-box">
+          4 interest-free payments of $50.00 with <i>Klarna</i>. <span>Learn more</span>
+        </div>
         <button
           onClick={handleOnClick}
           disabled={btnDisabled}
