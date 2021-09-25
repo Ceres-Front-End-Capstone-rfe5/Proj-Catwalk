@@ -63,9 +63,6 @@ class RelatedProductsAndOutfits extends React.Component {
       }).catch((err) => {
         console.log(err)
       })
-      .catch(err => {
-        console.log(err)
-      })
     }
 
   handleRender(id) {
@@ -76,18 +73,12 @@ class RelatedProductsAndOutfits extends React.Component {
     this.setState({
       currentInOutfitList: isCurrentInOutfit
     })
-    axios.get(`/api/products/${this.props.currentProductId}/related`)
-      .then(({ data }) => {
-        this.setState({relatedProducts: data})
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    this.getAndSetRelated();
   }
 
   addOutfit(id) {
     if (id) {
-      //! HANDLES WHATS CLICKED IN PRODUCT CARD
+      // HANDLES WHATS CLICKED IN PRODUCT CARD
       var toAddToOutfitStorage = id;
       var outfitList = this.state.yourOutfitList
       if (this.state.yourOutfitList.indexOf(id) === -1) {
@@ -99,7 +90,7 @@ class RelatedProductsAndOutfits extends React.Component {
       this.updateStateAndRender();
       console.log('Updated Storage--> ', sessionStorage)
     } else {
-      //! HANDLES CURRENT PRODUCT
+      // HANDLES CURRENT PRODUCT
       console.log(100)
       var toAddToOutfitStorage = this.props.currentProductId
       var outfitList = this.state.yourOutfitList
@@ -135,9 +126,7 @@ class RelatedProductsAndOutfits extends React.Component {
 
   render () {
     const {currentProduct, currentProductId, products} = this.props;
-
     const {relatedProducts, yourOutfitList, currentInOutfitList} = this.state;
-
     return (
         <div>
       <div className="related-products">

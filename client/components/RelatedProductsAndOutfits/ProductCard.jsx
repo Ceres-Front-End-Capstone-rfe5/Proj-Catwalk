@@ -62,7 +62,6 @@ class Product extends React.Component {
   }
   // ? handle Outfits
   addRelatedProductToOutfit() {
-    //HANDLES ONLY THE CURRENT OUTFIT ADD
     this.props.addOutfit(this.state.id)
   }
   removeOutfitCard(){
@@ -93,10 +92,8 @@ class Product extends React.Component {
   }
   // ? Our beautiful render
   render() {
-
     const {name, category, price, rating} = this.state;
     const {relatedProduct, inOutfitList} = this.props
-
     if(inOutfitList && this.state.id !== null) {
       return (
         <div className='product-card'>
@@ -114,8 +111,6 @@ class Product extends React.Component {
       </div>
     )
     } else if(!inOutfitList && this.state.id !== null) {
-
-      //onMouseLeave={this.handleLeave}
       return (
         <div className='product-card'>
           <div className="product-card-head">
