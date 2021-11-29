@@ -1,6 +1,6 @@
 # project-catwalk1
 
-Empty project.
+A retail application, this is the front-end portion connected to an external API. Built using React, CSS, and SCSS. The application contains a product overview and a carausel feature showing products related to the current. 
 
 ## Building and running on localhost
 
